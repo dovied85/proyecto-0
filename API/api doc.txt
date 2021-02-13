@@ -1,0 +1,23 @@
+Project_0 Doc
+
+GET    /user/:user_id
+if user exists, returns: 200, body = list of his events (may be empty list)
+else, returns: 404
+
+POST   /user/:user_id
+body = event to be added (name, category_id, location, address, start_date, end_date, online)
+if user exists, returns: 200, body = (added) event (+ id and user_id)
+else, returns: 404
+
+GET    /event/:event_id
+if event exists, returns: 200, body = event (+ id and user_id)
+else, returns: 404
+
+PUT    /event/:event_id
+body = edited event (name, category_id, location, address, start_date, end_date, online)
+if event exists, returns: 200, body = (edited) event (+ id and user_id)
+else, returns: 404
+
+DELETE /event/:event_id
+if event exists, returns: 204
+else, returns: 404
